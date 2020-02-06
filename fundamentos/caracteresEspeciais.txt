@@ -1,0 +1,18 @@
+\f corresponde ao feed de formulário.
+\r corresponde ao retorno de carro.
+\n corresponde ao avanço de linha.
+\t corresponde à guia horizontal.
+\v corresponde à guia vertical.
+\0corresponde ao NULcaractere.
+[\b] corresponde ao backspace.
+\scorresponde a espaço em branco (abreviação de [\f\n\r\t\v\u00A0\u2028\u2029]).
+\Scorresponde a qualquer coisa, exceto um espaço em branco (abreviação de [^\f\n\r\t\v\u00A0\u2028\u2029]).
+\wcorresponde a qualquer caractere alfanumérico (caracteres de palavra), incluindo sublinhado (abreviação de [a-zA-Z0-9_]).
+\Wcorresponde a caracteres que não sejam palavras (abreviação de [^a-zA-Z0-9_]).
+\dcorresponde a qualquer dígito (abreviação de [0-9]).
+\Dcorresponde a qualquer não dígito (abreviação de [^0-9]).
+\b corresponde a um limite de palavras (a posição entre uma palavra e um espaço).
+\Bcorresponde a um limite de não palavra (abreviação de [^\b]).
+\cXcorresponde a um caractere de controle. Ex .: \cmcombinações control-M.
+\xhhcorresponde ao caractere com dois caracteres de código hexadecimal hh.
+\uhhhhcorresponde ao caractere Unicode com quatro caracteres de código hexadecimal hhhh.

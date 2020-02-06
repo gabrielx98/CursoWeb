@@ -1,0 +1,35 @@
+usado em usandoModulosTerceiros {
+npm i lodash // instala a biblioteca lodash
+npm i -g nodemon // instala nodemon em global
+
+// rodar nodemon
+cd node // na pasta do projeto
+nodemon arquivo.js // rodar projeto
+}
+usado na pasta funcionarios {
+npm init // habilita wizard pra definir como vai ser o package.json
+npm init -y // responde tudo sim
+
+pwd // local onde está atualmente no terminal
+
+npm i --save axios // instala e descereve no package.json
+/*demonstração*/ npm i --save-dev axios@0.17.1 -E // instala, coloca nas dependecias de desenvolvimento e instala essa versão
+
+npm i // instala node_modules seguindo package.json
+
+npm start // executa o script de package.json , pode ser usado os outros scripts tbm
+// no caso de dev tem que ser npm run dev
+
+}
+
+usado no projeto{
+    cd node // entrar na pasta
+    cd projeto
+    npm init -y // criar o package.json
+    npm i --save--dev express@4.16.2 -E // instalar express nas dependecias de desenvolvimento, versão especifica 
+    npm i --save body-parser@1.18.2 -E
+}
+
+usado no temporizador{
+    npm i node-schedule@1.3.0 -E
+}
