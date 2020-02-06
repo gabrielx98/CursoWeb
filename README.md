@@ -1,3 +1,2 @@
 # CursoWeb
-# ola mundo
-# ola povo de deus
+# arquivos feitos através do curso
