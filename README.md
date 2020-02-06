@@ -1,2 +1,3 @@
 # CursoWeb
-echo "ola mundo"
+# ola mundo
+# ola povo de deus
