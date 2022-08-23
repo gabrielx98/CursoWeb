@@ -9,7 +9,7 @@ app.use(bodyParser.urlencoded({ extended: true }))
 
 // get mostra
 app.get('/produtos', (req, res, next) => {
-    res.send(bancoDeDados.getProdutos()) // converte pata JSON
+    res.send(bancoDeDados.getProdutos()) // converte paRa JSON
 })
 
 app.get('/produtos/:id', (req, res, next) => {

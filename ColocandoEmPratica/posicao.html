@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+
+            
+            width: 300px;
+            height: 310px;
+            
+            position: relative;
+            
+        }
+        div{
+            
+            display: inline-block;
+        }
+       
+        
+    </style>
+
+</head>
+
+<body>
+    
+
+    <img id="foto" src="https://quartaparedepop.com.br/wp-content/uploads/2019/03/vingadores_ultimato_cartaz_internacional_2.jpg">
+
+    <img src="https://quartaparedepop.com.br/wp-content/uploads/2019/03/vingadores_ultimato_cartaz_internacional.jpg">
+
+    <img src="https://quartaparedepop.com.br/wp-content/uploads/2019/03/vingadores_ultimato_cartaz_internacional_3.jpg">
+
+    <img src="https://quartaparedepop.com.br/wp-content/uploads/2019/03/vingadores_ultimato_cartaz_internacional_7.jpg">
+
+    <img src="https://quartaparedepop.com.br/wp-content/uploads/2019/03/vingadores_ultimato_cartaz_internacional_5.jpg">
+
+    <img src="https://quartaparedepop.com.br/wp-content/uploads/2019/03/vingadores_ultimato_cartaz_internacional_4.jpg">
+    <img src="https://quartaparedepop.com.br/wp-content/uploads/2019/03/vingadores_ultimato_cartaz_internacional_8.jpg">
+    <img src="https://quartaparedepop.com.br/wp-content/uploads/2019/03/vingadores_ultimato_cartaz_internacional_6.jpg">
+    <img src="https://quartaparedepop.com.br/wp-content/uploads/2019/03/vingadores_ultimato_cartaz_internacional_10.jpg">
+    <img src="https://quartaparedepop.com.br/wp-content/uploads/2019/03/vingadores_ultimato_cartaz_internacional_12.jpg">
+    <img src="https://quartaparedepop.com.br/wp-content/uploads/2019/03/vingadores_ultimato_cartaz_internacional_11.jpg">
+    <img src="https://quartaparedepop.com.br/wp-content/uploads/2019/03/vingadores_ultimato_cartaz_internacional_9.jpg">
+
+  <script>
+
+        const imagens = document.getElementsByTagName('img')
+        const elementos = Array.from(imagens)
+
+        const pFinal = -innerWidth
+        const pComeco = innerWidth
+        const pPasso = 1
+        function vai(comeco, final, passo) {
+            const novocomeco = comeco - passo
+
+            if(novocomeco<comeco && novocomeco > final){
+            elementos.forEach(element => {
+
+               element.style.left = (comeco) + 'px'
+            });
+                
+                setTimeout(()=> vai(novocomeco, final, passo),10)
+                }else{
+                    vai(pComeco,pFinal,pPasso)
+                }
+
+
+
+            
+        }
+
+        vai(pComeco, pFinal, pPasso)
+
+
+
+    </script> 
+ 
+</body>
+
+</html>
+
+<!-- refatorar o codigo de imagens.html para todas as imagens andarem uma seguida da outra-->
+
+

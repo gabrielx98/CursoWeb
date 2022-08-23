@@ -1,3 +1,4 @@
+// promise é assincrono
 function falarDepoisDe(segundos, frase) {
     return new Promise((resolve, reject) => {
         setTimeout(() => {

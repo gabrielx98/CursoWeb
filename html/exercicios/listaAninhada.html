@@ -1,0 +1,51 @@
+<h1> Projeto</h1>
+<ul class="tree">
+
+    <li>
+       <span> BACKEND</span>
+        <ul>
+            <li><span>app</span>
+                <ul>
+                    <li>produto.js</li>
+                    <li>usuario.js</li>
+                    <li>venda.js</li>
+                </ul>
+            </li>
+            <li> <span>config</span>
+                <ul>
+                    <li>banco,js</li>
+                    <li>rotas.js</li>
+                    <li>servidor.js</li>
+                </ul>
+            </li>
+            </ul>
+    </li>
+    <li>
+        <span>FRONTEND </span>
+        <ul>
+            <li><span>public</span>
+                <ul>
+                    <li>app.css</li>
+                    <li>app.js</li>
+                    <li>index.html</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+
+<link rel="stylesheet" href="http://files.cod3r.com.br/curso-web/tree.css">
+
+<script>
+    document.querySelectorAll('span').forEach(link => {
+        link.onclick = function (e) {
+            const ul = link.nextElementSibling
+            const d = ul.style.display
+            ul.style.display = d === 'none' ? 'block' : 'none'
+        }
+
+    })
+
+
+
+</script>

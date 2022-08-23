@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Desafio Menu</title>
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0px;
+            background-color: lightgrey;
+
+        }
+
+        .cabecalho {
+            background-color: #171717;
+            display: inline-block;
+            margin: 0px;
+            width: 100%;
+            height: 50px;
+            padding: 10px;
+            border-bottom: 5px solid rgb(87, 165, 238);
+
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+            display: inline-block;
+            position: relative;
+            font-family: 'Oswald';
+            font-size: 20px;
+
+        }
+
+        .menu-toggle {
+            display: none;
+            /* display: inline-block; */
+            background-color: rgba(70, 68, 68, 0.616);
+            position: absolute;
+            right: 1%;
+            padding: 10px;
+            width: 50px;
+            margin: 10px;
+            top: 1px;
+            border-radius: 5px;
+            border-color:rgba(169, 169, 169, 0.322);
+        }
+
+        .fa {
+            color: white;
+        }
+
+        .menu-toggle:focus {
+            outline: none;
+        }
+
+        .logo {
+
+            display: inline-block;
+            height: 100%;
+            width: 250px;
+            position: relative;
+
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .menu {
+            display: inline-block;
+            /* display: none; */
+            position: absolute;
+            padding: 0px 20px 0px 20px;
+            height: 50px;
+
+
+        }
+
+        .menu ul {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            margin: 0px;
+            padding: 0px;
+
+
+        }
+
+        .menu a {
+
+            padding: 15px;
+            width: auto;
+            height: auto;
+            bottom: 5px;
+            background-attachment: fixed;
+
+        }
+
+        .menu li {
+            display: inline-block;
+            align-items: center;
+
+            height: 100%;
+
+        }
+
+        .menu li:hover>a {
+            background-color: #57a5ee;
+
+            color: black;
+
+
+        }
+
+        .autenticacao {
+            display: inline-block;
+            /* display: none; */
+            position: absolute;
+            right: 1%;
+            height: 50px;
+            width: 180px;
+            padding: 5px;
+
+        }
+
+        .autenticacao a {
+
+            height: 30px;
+            text-align: center;
+            padding: 5px;
+
+
+        }
+
+        .botao {
+            border-radius: 20px;
+            border:#ff0404;
+
+            width: 100px;
+
+        }
+
+        .destaque {
+            background-color:#ff0404;
+        }
+
+        @media(max-width: 800px) {
+            .autenticacao {
+                display: none;
+            }
+
+        }
+
+        @media(max-width: 620px) {
+            .menu {
+                display: none;
+            }
+
+            .menu-toggle {
+                display: inline-block;
+            }
+        }
+
+        /* versão do leo
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Oswald', sans-serif;
+            background-color: lightgray;
+        }
+
+        .cabecalho {
+            background: #333;
+            border-bottom: solid 5px #4faddb;
+            height: 80px;
+            box-sizing: content-box;
+        }
+
+        .logo {
+            display: inline-block;
+            height: 80px;
+            padding: 15px;
+        }
+
+        .logo img {
+            height: 100%;
+        }
+
+        .menu-toggle {
+            float: right;
+            color: #eee;
+            background-color: #555;
+            border: solid 1px #777;
+            border-radius: 5px;
+            height: 40px;
+            padding: 10px 20px;
+            margin: 20px 15px;
+        }
+
+        .menu {
+            display: inline-block;
+            vertical-align: top;
+            height: 80px;
+            padding: 25px;
+        }
+
+        .menu ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu li {
+            display: inline-block;
+        }
+
+        .cabecalho a {
+            text-decoration: none;
+            color: #eee;
+            font-size: 1.3em;
+        }
+
+        .menu a {
+            padding: 15px;
+        }
+
+        .autenticacao {
+            float: right;
+            height: 80px;
+            padding: 25px;
+        }
+
+        .menu a:hover,
+        .menu a.selected {
+            background-color: #4faddb;
+            color: #000;
+        }
+
+        .botao {
+            border-radius: 30px;
+            padding: 10px 25px;
+            margin: 10px;
+        }
+
+        .destaque {
+            background: #f50a31;
+            color: #fff;
+        }
+
+        @media(min-width: 679px) {
+            .menu-toggle {
+                display: none;
+            }
+        }
+
+        @media(max-width: 680px) {
+            .menu {
+                display: none;
+            }
+        }
+
+        @media(max-width: 910px) {
+            .autenticacao {
+                display: none;
+            }
+        }
+        */
+    </style>
+</head>
+
+<body>
+    <header class="cabecalho">
+        <div class="logo">
+            <a href="#inicio">
+                <img src="http://files.cod3r.com.br/curso-web/logo.png" alt="Logo" />
+            </a>
+        </div><button class="menu-toggle">
+            <i class="fa fa-lg fa-bars"></i>
+        </button>
+        <nav class="menu">
+            <ul>
+                <li>
+                    <a href="#inicio">Início</a>
+                </li>
+                <li>
+                    <a href="#cursos">Cursos</a>
+                </li>
+                <li>
+                    <a href="#sobre">Sobre</a>
+                </li>
+                <li>
+                    <a href="#contato">Contato</a>
+                </li>
+            </ul>
+        </nav>
+        <aside class="autenticacao">
+            <a href="#login">Login</a>
+            <a href="#registar" class="botao destaque">Registrar</a>
+        </aside>
+    </header>
+
+    <script>
+
+        function main() {
+            const botoes = document.querySelectorAll('.menu a').forEach(links => {
+                const linkAtt = links.getAttribute('href')
+                const hash = pegaHash()
+
+                //console.log(`hash do atributo ${linkAtt} :: hash do navegador ${hash}`)
+
+                if (linkAtt == hash) {
+                    links.style.backgroundColor = '#57a5ee'
+                } else {
+                    links.style.backgroundColor = ''
+                }
+            })
+
+        }
+
+        function pegaHash() {
+            const hash = window.location.hash
+            return hash
+        }
+        main()
+        window.onhashchange = main
+
+
+    /* versão do leo
+    window.onhashchange = function(e) {
+            const oldURL = e.oldURL.split('#')[1]
+            const newURL = e.newURL.split('#')[1]
+            console.log(oldURL, newURL)
+            const oldLink = document.querySelector(`.menu a[href='#${oldURL}']`)
+            const newLink = document.querySelector(`.menu a[href='#${newURL}']`)
+            oldLink && oldLink.classList.remove('selected')
+            newLink && newLink.classList.add('selected')
+        }*/
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Selectors</title>
+    <link rel="stylesheet" href="css/tag.css">
+    <style>
+        /* seletores
+        * => geral
+        .classe => classe
+        #id => id
+        div > p => S2 dentro do S1 , descendente direto
+        div ul => S2 dentro do S1, qualquer descedente  
+        p + ul => S2 que antes tem S1
+        p ~ ol => S2 que tenha dentro do mesmo bloco o S1
+        [feira] => atributo
+        [feira=casa] => atributo com valor
+        [feira ~= escritorio] => procura escritorio nos atributos q posam ter espaço, virgula não funciona
+        [feira *= sa] => procura atributos que tenham no valor 'sa'
+        span:nth-child(1) => primeiro filho q seja span
+        section > :nth-child(odd) => filhos impares de section
+        section > :nth-child(even) => filhos pares de section
+        section > span:nth-of-type(2) => 2 elemento do tipo span dentro da section
+        */
+         
+        #aninhado > div{
+            color: #ff0;
+            background-color: #f77;
+        }
+    </style>
+</head>
+
+<body>
+    <div class='tag'>
+        <div class='tag'>
+            <p class='tag'>1</p>
+            <ul class='tag' feira='casa'>
+                <li>Arroz</li>
+                <li>Feijão</li>
+            </ul>
+            <ul class='tag' feira='escritorio empresa'>
+                <li>Café</li>
+                <li>Água</li>
+            </ul>
+            <ol id='aprovados' class='tag'>
+                <li>Maria</li>
+                <li>Pedro</li>
+                <li>Ana</li>
+            </ol>
+            <div id='aninhado' class='tag'>
+                <div class="tag">
+                    <section class='tag'>
+                        <span class='tag'>1</span>
+                        <p class='tag'>2</p>
+                        <span class='tag'>3</span>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/tag.js"></script>
+</body>
+
+</html>

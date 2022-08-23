@@ -1,0 +1,1 @@
+// instalar o servidor http// npm i -g http-server
